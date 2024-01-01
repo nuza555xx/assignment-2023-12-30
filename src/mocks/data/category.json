@@ -1,0 +1,20 @@
+[
+  {
+    "label": "Men",
+    "slug": "men",
+    "sequence": 1,
+    "visibility": "publish"
+  },
+  {
+    "label": "Travel",
+    "slug": "travel",
+    "sequence": 2,
+    "visibility": "publish"
+  },
+  {
+    "label": "Sport",
+    "slug": "sport",
+    "sequence": 3,
+    "visibility": "publish"
+  }
+]

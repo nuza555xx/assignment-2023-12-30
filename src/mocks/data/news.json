@@ -1,0 +1,142 @@
+[
+  {
+    "category": "travel",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "coverImage": {
+      "original": {
+        "dimensions": "1920x1080",
+        "key": "image_key1",
+        "name": "image_name1"
+      },
+      "thumbnail": {
+        "dimensions": "320x180",
+        "key": "thumbnail_key1",
+        "name": "thumbnail_name1"
+      }
+    },
+    "createdBy": "John Doe",
+    "galleries": [
+      {
+        "original": {
+          "dimensions": "1200x800",
+          "key": "gallery_key1",
+          "name": "gallery_name1"
+        },
+        "thumbnail": {
+          "dimensions": "240x160",
+          "key": "thumbnail_key1",
+          "name": "thumbnail_name1"
+        }
+      },
+      {
+        "original": {
+          "dimensions": "1600x900",
+          "key": "gallery_key2",
+          "name": "gallery_name2"
+        },
+        "thumbnail": {
+          "dimensions": "320x180",
+          "key": "thumbnail_key2",
+          "name": "thumbnail_name2"
+        }
+      }
+    ],
+    "hashtags": ["travel_tips", "grooming_tips", "adventure_travel"],
+    "metadata": {
+      "og": {
+        "description": "This is a tech news article",
+        "keyword": "technology, news, Lorem",
+        "title": "Tech News"
+      },
+      "seo": {
+        "description": "Tech news for Lorem ipsum",
+        "keyword": "tech, news, Lorem ipsum",
+        "title": "Lorem Ipsum Tech News"
+      }
+    },
+    "sequence": 1,
+    "title": "Tech News Article 1",
+    "updatedBy": "Jane Smith"
+  },
+  {
+    "category": "sport",
+    "content": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "coverImage": {
+      "original": {
+        "dimensions": "1920x1080",
+        "key": "image_key2",
+        "name": "image_name2"
+      },
+      "thumbnail": {
+        "dimensions": "320x180",
+        "key": "thumbnail_key2",
+        "name": "thumbnail_name2"
+      }
+    },
+    "createdBy": "Alice Johnson",
+    "galleries": [
+      {
+        "original": {
+          "dimensions": "1200x800",
+          "key": "gallery_key3",
+          "name": "gallery_name3"
+        },
+        "thumbnail": {
+          "dimensions": "240x160",
+          "key": "thumbnail_key3",
+          "name": "thumbnail_name3"
+        }
+      }
+    ],
+    "hashtags": ["baseball_news", "soccer_updates", "tennis_updates"],
+    "metadata": {
+      "og": {
+        "description": "This is a sports news article",
+        "keyword": "sports, news, Lorem",
+        "title": "Sports News"
+      },
+      "seo": {
+        "description": "Sports news for Lorem ipsum",
+        "keyword": "sports, news, Lorem ipsum",
+        "title": "Lorem Ipsum Sports News"
+      }
+    },
+    "sequence": 2,
+    "title": "Sports News Article 1",
+    "updatedBy": "Bob Williams"
+  },
+  {
+    "category": "men",
+    "content": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "coverImage": {
+      "original": {
+        "dimensions": "1920x1080",
+        "key": "image_key4",
+        "name": "image_name4"
+      },
+      "thumbnail": {
+        "dimensions": "320x180",
+        "key": "thumbnail_key4",
+        "name": "thumbnail_name4"
+      }
+    },
+    "createdBy": "Michael Wilson",
+    "galleries": [],
+    "hashtags": ["mens_fashion", "mens_lifestyle"],
+    "metadata": {
+      "og": {
+        "description": "This is a science news article",
+        "keyword": "science, news, Lorem",
+        "title": "Science News"
+      },
+      "seo": {
+        "description": "Science news for Lorem ipsum",
+        "keyword": "science, news, Lorem ipsum",
+        "title": "Lorem Ipsum Science News"
+      }
+    },
+    "sequence": 4,
+    "title": "Science News Article 1",
+    "updatedBy": "Sarah Jones"
+  }
+]

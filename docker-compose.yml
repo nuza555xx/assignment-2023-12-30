@@ -1,0 +1,23 @@
+version: '3.8'
+services:
+  # cms:
+  #   image: cms
+  #   container_name: cms-service
+  #   restart: always
+  #   env_file:
+  #     - .env
+  #   depends_on:
+  #     - mongodb
+  #   command: npm run mock:prod
+  #   ports:
+  #     - 80:80
+
+  mongodb:
+    image: mongo
+    container_name: mongodb
+    restart: always
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=${DB_USERNAME}
+      - MONGO_INITDB_ROOT_PASSWORD=${DB_PASSWORD}
+    ports:
+      - 27017:27017

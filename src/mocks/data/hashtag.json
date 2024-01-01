@@ -1,0 +1,123 @@
+[
+    {
+      "label": "Men's Fashion",
+      "slug": "mens_fashion",
+      "sequence": 1,
+      "visibility": "publish"
+    },
+    {
+      "label": "Travel Tips",
+      "slug": "travel_tips",
+      "sequence": 2,
+      "visibility": "publish"
+    },
+    {
+      "label": "Sports News",
+      "slug": "sports_news",
+      "sequence": 3,
+      "visibility": "publish"
+    },
+    {
+      "label": "Men's Lifestyle",
+      "slug": "mens_lifestyle",
+      "sequence": 4,
+      "visibility": "publish"
+    },
+    {
+      "label": "Adventure Travel",
+      "slug": "adventure_travel",
+      "sequence": 5,
+      "visibility": "publish"
+    },
+    {
+      "label": "Football Updates",
+      "slug": "football_updates",
+      "sequence": 6,
+      "visibility": "publish"
+    },
+    {
+      "label": "Grooming Tips",
+      "slug": "grooming_tips",
+      "sequence": 7,
+      "visibility": "publish"
+    },
+    {
+      "label": "Travel Destinations",
+      "slug": "travel_destinations",
+      "sequence": 8,
+      "visibility": "publish"
+    },
+    {
+      "label": "Basketball Highlights",
+      "slug": "basketball_highlights",
+      "sequence": 9,
+      "visibility": "publish"
+    },
+    {
+      "label": "Men's Health",
+      "slug": "mens_health",
+      "sequence": 10,
+      "visibility": "publish"
+    },
+    {
+      "label": "Beach Vacations",
+      "slug": "beach_vacations",
+      "sequence": 11,
+      "visibility": "publish"
+    },
+    {
+      "label": "Soccer Updates",
+      "slug": "soccer_updates",
+      "sequence": 12,
+      "visibility": "publish"
+    },
+    {
+      "label": "Fitness Tips",
+      "slug": "fitness_tips",
+      "sequence": 13,
+      "visibility": "publish"
+    },
+    {
+      "label": "Camping Adventures",
+      "slug": "camping_adventures",
+      "sequence": 14,
+      "visibility": "publish"
+    },
+    {
+      "label": "Baseball News",
+      "slug": "baseball_news",
+      "sequence": 15,
+      "visibility": "publish"
+    },
+    {
+      "label": "Men's Style Trends",
+      "slug": "mens_style_trends",
+      "sequence": 16,
+      "visibility": "publish"
+    },
+    {
+      "label": "Exotic Travel",
+      "slug": "exotic_travel",
+      "sequence": 17,
+      "visibility": "publish"
+    },
+    {
+      "label": "Tennis Updates",
+      "slug": "tennis_updates",
+      "sequence": 18,
+      "visibility": "publish"
+    },
+    {
+      "label": "Gym Workouts",
+      "slug": "gym_workouts",
+      "sequence": 19,
+      "visibility": "publish"
+    },
+    {
+      "label": "Hiking Adventures",
+      "slug": "hiking_adventures",
+      "sequence": 20,
+      "visibility": "publish"
+    }
+  ]
+  

@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "src",
+  "compilerOptions": {
+    "plugins": ["@nestjs/graphql"],
+    "deleteOutDir": true,
+    "typeCheck": true,
+    "builder": {
+      "type": "swc",
+      "options": {
+        "swcrcPath": ".swcrc"
+      }
+    },
+    "assets": [
+      {
+        "include": "*/**",
+        "outDir": "dist",
+        "watchAssets": true
+      }
+    ]
+  }
+}

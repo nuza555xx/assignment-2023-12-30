@@ -1,0 +1,169 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type CategoryEntity {
+  createdAt: DateTime!
+  id: String!
+  label: String!
+  sequence: Int!
+  slug: String!
+  updatedAt: DateTime!
+}
+
+input CreateCategory {
+  label: String!
+  sequence: Int!
+  slug: String!
+}
+
+input CreateHashtag {
+  label: String!
+  sequence: Int!
+  slug: String!
+}
+
+input CreateNews {
+  category: String!
+  content: String!
+  coverImage: ImageResolution!
+  createdBy: String!
+  galleries: [ImageResolution!]!
+  hashtags: [String!]!
+  metadata: Meta!
+  sequence: Int!
+  title: String!
+  updatedBy: String!
+}
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+type HashtagEntity {
+  createdAt: DateTime!
+  id: String!
+  label: String!
+  sequence: Int!
+  slug: String!
+  updatedAt: DateTime!
+}
+
+input ImageDetail {
+  dimensions: String!
+  key: String!
+  name: String!
+}
+
+type ImageDetailEntity {
+  dimensions: String!
+  key: String!
+  name: String!
+}
+
+input ImageResolution {
+  original: ImageDetail!
+  thumbnail: ImageDetail!
+}
+
+type ImageResolutionEntity {
+  original: ImageDetailEntity!
+  thumbnail: ImageDetailEntity!
+}
+
+input Meta {
+  og: Og!
+  seo: Seo!
+}
+
+type MetaEntity {
+  og: OgEntity!
+  seo: SeoEntity!
+}
+
+type Mutation {
+  createCategory(createCategory: CreateCategory!): CategoryEntity!
+  createHashtag(createHashtag: CreateHashtag!): HashtagEntity!
+  createNews(createNews: CreateNews!): NewsEntity!
+  updateCategory(updateCategory: UpdateCategory!): CategoryEntity!
+  updateHashtag(updateHashtag: UpdateHashtag!): HashtagEntity!
+  updateNews(updateNews: UpdateNews!): NewsEntity!
+}
+
+type NewsEntity {
+  category: String!
+  content: String!
+  coverImage: ImageResolutionEntity!
+  createdAt: DateTime!
+  createdBy: String!
+  galleries: [ImageResolutionEntity!]!
+  hashtags: [String!]!
+  id: String!
+  metadata: MetaEntity!
+  sequence: Int!
+  title: String!
+  updatedAt: DateTime!
+  updatedBy: String!
+}
+
+input Og {
+  description: String!
+  keyword: String!
+  title: String!
+}
+
+type OgEntity {
+  description: String!
+  keyword: String!
+  title: String!
+}
+
+type Query {
+  category: [CategoryEntity!]!
+  categoryById(id: String!): CategoryEntity!
+  hashtag: [HashtagEntity!]!
+  hashtagById(id: String!): HashtagEntity!
+  news: [NewsEntity!]!
+  newsById(id: String!): NewsEntity!
+}
+
+input Seo {
+  description: String!
+  keyword: String!
+  title: String!
+}
+
+type SeoEntity {
+  description: String!
+  keyword: String!
+  title: String!
+}
+
+input UpdateCategory {
+  id: String!
+  label: String
+  sequence: Int
+  slug: String
+}
+
+input UpdateHashtag {
+  id: String!
+  label: String
+  sequence: Int
+  slug: String
+}
+
+input UpdateNews {
+  category: String
+  content: String
+  coverImage: ImageResolution
+  createdBy: String
+  galleries: [ImageResolution!]
+  hashtags: [String!]
+  id: String!
+  metadata: Meta
+  sequence: Int
+  title: String
+  updatedBy: String
+}

@@ -1,0 +1,5 @@
+/* eslint-disable */
+export default async () => {
+    const t = {};
+    return { "@nestjs/graphql": { "models": [[import("./entities/news.entity"), { "ImageDetailEntity": { name: {}, key: {}, dimensions: {} }, "ImageResolutionEntity": { thumbnail: {}, original: {} }, "SeoEntity": { title: {}, keyword: {}, description: {} }, "MetaEntity": { seo: {}, og: {} }, "NewsEntity": { id: {}, title: {}, content: {}, coverImage: {}, sequence: {}, category: {}, hashtags: {}, galleries: { nullable: true }, metadata: {}, createdAt: {}, updatedAt: {}, createdBy: {}, updatedBy: {} } }], [import("./entities/category.entity"), { "CategoryEntity": { id: {}, label: {}, slug: {}, sequence: {}, createdAt: {}, updatedAt: {} } }], [import("./entities/hashtag.entity"), { "HashtagEntity": { id: {}, label: {}, slug: {}, sequence: {}, createdAt: {}, updatedAt: {} } }]] } };
+};
