@@ -51,20 +51,22 @@ $ npm install
 
 ## Environment with docker swarms
 
-### docker build image cms service
 ```bash
+# docker build image cms service
 $ docker build -t cms:latest  -f Dockerfile .
 ```
 
-### source for service
+
 ```bash
+# source for service
 $ docker-compose up -d
 ```
 
 ## Script mock before running app
 
-### before
+
 ```bash
+# before
 $ npm run build
 ```
 
