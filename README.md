@@ -15,6 +15,13 @@ erDiagram
     sequence Number
   }
 
+ Engagement {
+    _id ObjectID
+    action ActionBy
+    ip String
+    refId ObjectID
+  }
+
   News {
     _id ObjectID
     title String
@@ -29,6 +36,7 @@ erDiagram
     updatedBy String
   }
 
+  Engagement }|--|{ News : contains
   Category }|--|{ News : contains
   Hashtag }|--|{ News : contains
 
