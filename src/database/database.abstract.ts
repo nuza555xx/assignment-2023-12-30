@@ -1,9 +1,11 @@
 import {
+  AggregateOptions,
   AnyKeys,
   Document,
   FilterQuery,
   InsertManyOptions,
   MergeType,
+  PipelineStage,
   ProjectionType,
   QueryOptions,
   SaveOptions,
@@ -17,6 +19,11 @@ export abstract class Repository<T> {
   abstract transaction(...args: any[]): Promise<void>;
 
   abstract exists(filters: FilterQuery<T>): Promise<boolean>;
+
+  abstract aggregate<P>(
+    pipelines: PipelineStage[],
+    options?: AggregateOptions,
+  ): Promise<P[]>;
 
   abstract findOne(dto: AnyKeys<T>, options?: SaveOptions): Promise<T>;
 

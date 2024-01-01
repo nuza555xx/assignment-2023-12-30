@@ -2,6 +2,8 @@ import { Global, Module } from '@nestjs/common';
 import {
   Category,
   CategorySchema,
+  Engagement,
+  EngagementSchema,
   Hashtag,
   HashtagSchema,
   News,
@@ -10,6 +12,7 @@ import {
 import { MongooseModule } from '@common';
 import { RepositoryProvider } from './database.enum';
 import { CategoryImpl, HashtagImpl, NewsImpl } from './implements';
+import { EngagementImpl } from './implements/engagement.impl';
 
 @Global()
 @Module({
@@ -27,6 +30,10 @@ import { CategoryImpl, HashtagImpl, NewsImpl } from './implements';
         name: News.name,
         schema: NewsSchema,
       },
+      {
+        name: Engagement.name,
+        schema: EngagementSchema,
+      },
     ]),
   ],
   providers: [
@@ -42,11 +49,16 @@ import { CategoryImpl, HashtagImpl, NewsImpl } from './implements';
       provide: RepositoryProvider.NEWS_PROVIDER,
       useClass: NewsImpl,
     },
+    {
+      provide: RepositoryProvider.ENGAGEMENT_PROVIDER,
+      useClass: EngagementImpl,
+    },
   ],
   exports: [
     RepositoryProvider.CATEGORY_PROVIDER,
     RepositoryProvider.HASHTAG_PROVIDER,
     RepositoryProvider.NEWS_PROVIDER,
+    RepositoryProvider.ENGAGEMENT_PROVIDER,
   ],
 })
 export class DatabaseModule {}

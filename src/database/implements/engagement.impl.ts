@@ -18,12 +18,12 @@ import {
   mongo,
 } from 'mongoose';
 import { isObject } from 'class-validator';
-import { Hashtag } from '../schemas';
+import { Engagement } from '../schemas';
 import { Repository } from '../database.abstract';
 
-export class HashtagImpl implements Repository<Hashtag> {
+export class EngagementImpl implements Repository<Engagement> {
   constructor(
-    @InjectModel(Hashtag.name) private readonly model: Model<Hashtag>,
+    @InjectModel(Engagement.name) private readonly model: Model<Engagement>,
     @InjectConnection() private readonly connection: Connection,
   ) {}
 
@@ -41,7 +41,7 @@ export class HashtagImpl implements Repository<Hashtag> {
     }
   }
 
-  async exists(filters: FilterQuery<Hashtag>): Promise<boolean> {
+  async exists(filters: FilterQuery<Engagement>): Promise<boolean> {
     const exists = await this.model.exists(filters).exec();
     return isObject(exists);
   }
@@ -54,74 +54,77 @@ export class HashtagImpl implements Repository<Hashtag> {
   }
 
   findOne(
-    filters: FilterQuery<Hashtag>,
-    projection?: ProjectionType<Document<Hashtag>>,
+    filters: FilterQuery<Engagement>,
+    projection?: ProjectionType<Document<Engagement>>,
     options?: QueryOptions,
-  ): Promise<Hashtag> {
+  ): Promise<Engagement> {
     return this.model.findOne(filters, projection, options).exec();
   }
 
   findMany(
-    filters: FilterQuery<Hashtag>,
-    projection?: ProjectionType<Document<Hashtag>>,
+    filters: FilterQuery<Engagement>,
+    projection?: ProjectionType<Document<Engagement>>,
     options?: QueryOptions,
-  ): Promise<Hashtag[]> {
+  ): Promise<Engagement[]> {
     return this.model.find(filters, projection, options).exec();
   }
 
-  insertOne(dto: AnyKeys<Hashtag>, options?: SaveOptions): Promise<Hashtag> {
+  insertOne(
+    dto: AnyKeys<Engagement>,
+    options?: SaveOptions,
+  ): Promise<Engagement> {
     const created = new this.model(dto);
     return created.save(options);
   }
 
   insertMany(
-    dto: AnyKeys<Hashtag>[],
+    dto: AnyKeys<Engagement>[],
     options?: InsertManyOptions,
-  ): Promise<MergeType<Document<Hashtag>, Hashtag>[]> {
+  ): Promise<MergeType<Document<Engagement>, Engagement>[]> {
     return this.model.insertMany(dto, options);
   }
 
   updateOne(
-    filters: FilterQuery<Hashtag>,
-    dto: UpdateQuery<Hashtag>,
-    options?: QueryOptions<Hashtag>,
+    filters: FilterQuery<Engagement>,
+    dto: UpdateQuery<Engagement>,
+    options?: QueryOptions<Engagement>,
   ): Promise<UpdateWriteOpResult> {
     return this.model.updateOne(filters, dto, options).exec();
   }
 
   updateById(
     id: Types.ObjectId,
-    dto: UpdateQuery<Hashtag>,
-    options?: QueryOptions<Hashtag>,
-  ): Promise<Hashtag> {
+    dto: UpdateQuery<Engagement>,
+    options?: QueryOptions<Engagement>,
+  ): Promise<Engagement> {
     return this.model.findByIdAndUpdate(id, dto, options).exec();
   }
 
   updateMany(
-    filters: FilterQuery<Hashtag>,
-    dto: UpdateQuery<Hashtag>,
-    options?: QueryOptions<Hashtag>,
+    filters: FilterQuery<Engagement>,
+    dto: UpdateQuery<Engagement>,
+    options?: QueryOptions<Engagement>,
   ): Promise<UpdateWriteOpResult> {
     return this.model.updateMany(filters, dto, options).exec();
   }
 
   deleteOne(
-    filters: FilterQuery<Hashtag>,
-    options?: QueryOptions<Hashtag>,
+    filters: FilterQuery<Engagement>,
+    options?: QueryOptions<Engagement>,
   ): Promise<mongo.DeleteResult> {
     return this.model.deleteOne(filters, options).exec();
   }
 
   deleteById(
     id: Types.ObjectId,
-    options?: QueryOptions<Hashtag>,
-  ): Promise<Hashtag> {
+    options?: QueryOptions<Engagement>,
+  ): Promise<Engagement> {
     return this.model.findByIdAndDelete(id, options).exec();
   }
 
   deleteMany(
-    filters: FilterQuery<Hashtag>,
-    options?: QueryOptions<Hashtag>,
+    filters: FilterQuery<Engagement>,
+    options?: QueryOptions<Engagement>,
   ): Promise<mongo.DeleteResult> {
     return this.model.deleteMany(filters, options).exec();
   }

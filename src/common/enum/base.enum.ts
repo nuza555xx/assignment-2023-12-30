@@ -9,3 +9,8 @@ export enum Sorting {
   ASC = 'asc',
   DESC = 'desc',
 }
+
+export enum ActionBy {
+  VIEW = 'view',
+  COMMENT = 'comment',
+}

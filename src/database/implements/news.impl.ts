@@ -1,5 +1,6 @@
 import { InjectConnection, InjectModel } from '@nestjs/mongoose';
 import {
+  AggregateOptions,
   AnyKeys,
   Connection,
   Document,
@@ -7,6 +8,7 @@ import {
   InsertManyOptions,
   MergeType,
   Model,
+  PipelineStage,
   ProjectionType,
   QueryOptions,
   SaveOptions,
@@ -42,6 +44,13 @@ export class NewsImpl implements Repository<News> {
   async exists(filters: FilterQuery<News>): Promise<boolean> {
     const exists = await this.model.exists(filters).exec();
     return isObject(exists);
+  }
+
+  aggregate<T>(
+    pipelines: PipelineStage[],
+    options?: AggregateOptions,
+  ): Promise<T[]> {
+    return this.model.aggregate(pipelines, options).exec();
   }
 
   findOne(

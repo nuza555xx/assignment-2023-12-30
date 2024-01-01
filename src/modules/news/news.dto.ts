@@ -92,3 +92,12 @@ export class UpdateNews extends PartialType(CreateNews) {
   @Field(() => String)
   id: string;
 }
+
+@InputType()
+export class UpdateView {
+  @Field(() => String)
+  action: string;
+
+  @Field(() => String)
+  ip?: string;
+}

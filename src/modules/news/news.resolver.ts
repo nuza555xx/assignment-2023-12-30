@@ -12,9 +12,19 @@ export class NewsResolver {
     return this.newsService.create(input);
   }
 
-  @Query(() => [NewsEntity], { name: 'news' })
-  findAll() {
-    return this.newsService.findAll();
+  @Query(() => [NewsEntity], { name: 'newsHighlight' })
+  findHighlight() {
+    return this.newsService.findHighlight();
+  }
+
+  @Query(() => [NewsEntity], { name: 'newsPopular' })
+  findPopular() {
+    return this.newsService.findPopular();
+  }
+
+  @Query(() => [NewsEntity], { name: 'newsLatest' })
+  findLatest() {
+    return this.newsService.findLatest();
   }
 
   @Query(() => NewsEntity, { name: 'newsById' })

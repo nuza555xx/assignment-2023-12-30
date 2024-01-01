@@ -124,8 +124,10 @@ type Query {
   categoryById(id: String!): CategoryEntity!
   hashtag: [HashtagEntity!]!
   hashtagById(id: String!): HashtagEntity!
-  news: [NewsEntity!]!
   newsById(id: String!): NewsEntity!
+  newsHighlight: [NewsEntity!]!
+  newsLatest: [NewsEntity!]!
+  newsPopular: [NewsEntity!]!
 }
 
 input Seo {
