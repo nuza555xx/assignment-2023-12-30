@@ -39,14 +39,14 @@ $ npm install
 $ docker build -t cms:latest  -f Dockerfile .
 ```
 
-# source for service
+### source for service
 ```bash
 $ docker-compose up -d
 ```
 
 ## Script mock before running app
 
-# before
+### before
 ```bash
 $ npm run build
 ```
