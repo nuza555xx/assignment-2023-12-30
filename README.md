@@ -34,7 +34,7 @@ $ npm install
 
 ## Environment with docker swarms
 
-# docker build image cms service
+### docker build image cms service
 ```bash
 $ docker build -t cms:latest  -f Dockerfile .
 ```
